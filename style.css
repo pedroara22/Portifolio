@@ -1,0 +1,303 @@
+html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 300vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: rgb(13, 13, 13);
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  background: rgb(13,13,13);
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0px;
+  z-index: -1;
+}
+h1 {
+  font-size: 4vw;
+  color: aliceblue;
+  margin-top: 20px;
+  text-align: center;
+}
+.contentDiv {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+.techs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.tech, .project {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #808080;
+  border-radius: 30px;
+  width: 20vw;
+  height: 20vw;
+  padding: 20px;
+  justify-content: space-between;
+}
+.tech a, .project a{
+  color: #000;
+  font-size: 1vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.techsDiv h2{
+  margin-bottom: 30px;
+}
+.resume{
+  font-size: 15px;
+  color: #808080;
+}
+.tech h2 {
+  font-size: 40px;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: -20px;
+}
+#job{
+  animation: colorAnimate 5s linear alternate infinite;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes colorAnimate {
+  0% {
+    background-color: #EFD81D;
+  }
+  50% {
+    background-color: #6ADB68;
+  }
+  100% {
+    background-color: #7371FF;
+  }
+  
+}
+.project a{
+  font-size: 1vw;
+  text-decoration: none;
+  color: #000;
+  font-size: 1vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.react{
+  background: linear-gradient(90deg, #7371FF, #454499);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tech p{
+  font-size: 1vw;
+  font-size: 13px;
+  color: #808080;
+  text-align: justify;
+}
+.tech a, .project a{
+  background:aliceblue;
+}
+.tech a:not(#mainLink){
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .project a, .tech a{
+    font-size: 4vw;
+    text-decoration: none;
+  }
+  .project a{
+    padding: 7px 20px 7px 20px;
+  }
+  .project p{
+    font-size: 4vw;
+  }
+  .techs{
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+  .tech, .project {
+    min-width: 80vw;
+    min-height: 80vw;
+  }
+  .tech p {
+    font-size: 20px;
+  }
+  h1{
+    font-size: 6vw;
+  }
+  .tech:nth-child(1){
+    margin-left: 40px;
+  }
+  .tech:nth-last-child(1){
+    margin-right: 40px;
+  }
+  .tech h2{
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 750px) and (min-width: 600px){
+  .tech, .project {
+    width: 40vw;
+    height: 40vw;
+  }
+  .tech p {
+    font-size: 12px;
+    
+  }
+  .tech h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 1100px) and (min-width: 750px) {
+  .tech {
+    min-width: 40vw;
+    height: 40vw;
+  }
+  .tech p {
+    font-size: 20px;
+  }
+  .tech h2{
+    font-size: 50px;
+  }
+}
+.techsDiv {
+  margin-top: 10px;
+  font-size: 27px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background: #000;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+}
+.node, .mongo{
+  background: linear-gradient(90deg, #6ADB68, #275A26);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.js{
+  background: linear-gradient(90deg, #F0DB4F, #EFD81D);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.all-Btn{
+  background: linear-gradient(90deg, #f8f8f8, #c9c9c9);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+#navBar a{
+  color: aliceblue;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+}
+#projectsDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+} 
+#projectsDiv h2{
+  color: aliceblue;
+  font-size: 30px;
+}
+#selector{
+  display: flex;;
+  align-items: center;
+  margin-top: 20px;
+  border-bottom: 2px solid aliceblue;
+  font-size: 20px;
+  width: 80vw;
+  gap: 20px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+#selector a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.selected{
+  color: aliceblue;
+}
+#selector a:not(.selected){
+  color: #858585;
+}
+#projectsArea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.project:nth-child(odd) h2{
+  background: linear-gradient(90deg, #F0DB4F, #EFD81D);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.project:nth-child(even) h2{
+  background: linear-gradient(90deg, #7371FF, #454499);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ball{
+  width: 200px;
+  height: 200px;
+  background: #eeeeee;
+  z-index: 1;
+  transition: 0.5s;
+}
